@@ -1,8 +1,7 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
+# Codility-changellen
 //MARK : === Task description ===
-/*A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+Link : https://app.codility.com/programmers/lessons/1-iterations/
+A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
 
 For example, number 9 has binary representation 1001 and contains a binary gap of length 2. The number 529 has binary representation 1000010001 and contains two binary gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one binary gap of length 1. The number 15 has binary representation 1111 and has no binary gaps.
 
@@ -21,33 +20,3 @@ Complexity:
 
 expected worst-case time complexity is O(log(N));
 expected worst-case space complexity is O(1).
-*/
- binary_gap(4)
-
-public func binary_gap(_ N : Int) -> Int {
-    var number : Int  = N  ;
-    var maxGap : Int  =  0;
-    var currentGap : Int = 0;
-
-    if ( number > 0 && number % 2 == 0){
-        number =  number / 2 ;
-    }
-    while number > 0{
-
-        number =  number / 2 ;
-
-        if (number  % 2  != 0){
-            if (currentGap > maxGap ){
-                maxGap =  currentGap;
-
-            }
-            currentGap = 0;
-
-        }else{
-            currentGap = currentGap + 1;
-
-        }
-
-    }
-    return maxGap;
-}
