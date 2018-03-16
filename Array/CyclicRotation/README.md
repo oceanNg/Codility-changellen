@@ -1,5 +1,4 @@
-# Codility-changellen
-//MARK : === Task description ===
+# Codility- cyclic_rotation
 
 Link : https://app.codility.com/programmers/lessons/2-arrays/cyclic_rotation/
 
